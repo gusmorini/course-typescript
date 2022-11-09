@@ -104,7 +104,6 @@ result = 200;
  * retorno de funções | métodos
  * que não retorna valor
  */
-const myConsole: void = console.log("Hello my friends");
 function consoleDate(): void {
   console.log(Date.now());
 }
@@ -122,3 +121,52 @@ function loopInfinite(): never {
     console.log(n++);
   }
 }
+
+/**
+ * type assertions
+ * força afirmação de tipos
+ * força a aceitar o tipo da variável
+ */
+const fruit: unknown = "banana";
+const fruits: string[] = [];
+/** opção 1 - mais recomendado */
+fruits.push(fruit as string);
+/** opção 2 - opção que n funciona no jsx */
+fruits.push(<string>fruit);
+
+/**
+ * functions
+ * pode ser tipado os parametros
+ * e o retorno da função
+ */
+function viewMessage(message: string | number): boolean {
+  console.log(message);
+  return true;
+}
+
+const sumNumbers = (num1: number, num2: number): number => {
+  return num1 + num2;
+};
+
+/**
+ * function default
+ * subjet está definido com valor padrão
+ * sender está definido como opcional
+ */
+const sendEmail = (
+  from: string,
+  subject: string = "no subject",
+  sender?: string
+): void => {
+  console.log(`from: ${from} - subject: ${subject} - sender: ${sender}`);
+};
+
+/**
+ * rest parameters
+ * possivel passar parametros variados
+ * independente da quantidade de parametros
+ * vai ser realizado a operação
+ */
+const totalIncome = (...income: number[]): number => {
+  return income.reduce((acm, item) => acm + item, 0);
+};

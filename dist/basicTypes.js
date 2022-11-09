@@ -46,7 +46,6 @@ result = {
 };
 result = "yes very nice bro";
 result = 200;
-const myConsole = console.log("Hello my friends");
 function consoleDate() {
     console.log(Date.now());
 }
@@ -59,4 +58,21 @@ function loopInfinite() {
         console.log(n++);
     }
 }
-//# sourceMappingURL=main.js.map
+const fruit = "banana";
+const fruits = [];
+fruits.push(fruit);
+fruits.push(fruit);
+function viewMessage(message) {
+    console.log(message);
+    return true;
+}
+const sumNumbers = (num1, num2) => {
+    return num1 + num2;
+};
+const sendEmail = (from, subject = "no subject", sender) => {
+    console.log(`from: ${from} - subject: ${subject} - sender: ${sender}`);
+};
+const totalIncome = (...income) => {
+    return income.reduce((acm, item) => acm + item, 0);
+};
+//# sourceMappingURL=basicTypes.js.map
