@@ -13,19 +13,16 @@ class Product {
 
 const ps5 = new Product("Playstation 5", 4000);
 const xbox = new Product("Xbox series X", 4000);
-console.log("-- class", ps5, xbox);
 
 /*
  * union types
  */
 let keyPix: string | number = "teste@teste.com";
-console.log("-- keyPix:", keyPix);
 
 /*
  * boolean
  */
 let admin: boolean = true;
-console.log("-- boolean", admin);
 
 /*
  * array
@@ -35,7 +32,6 @@ const moviesYears: Array<number | string> = [];
 for (let year = 1980; year <= new Date().getFullYear(); year++) {
   moviesYears.push(year);
 }
-console.log("-- array ", moviesYears);
 
 /*
  * tuple
@@ -52,8 +48,6 @@ let daysWeek: [string, string, string, string, string, string, string] = [
   "Sunday",
 ];
 
-console.log("--tuple", superset, daysWeek);
-
 /*
  * objects
  */
@@ -62,8 +56,6 @@ const configServer: object = {
   ip: "127:0.0.0.1",
   password: "123456",
 };
-
-console.log("--- object", configServer);
 
 /**
  * enum
@@ -74,4 +66,30 @@ enum Permission {
   READONLY,
 }
 
-console.log("--enum", Permission);
+/**
+ * null | undefined
+ */
+
+const element: HTMLHeadingElement | null = document.querySelector("div");
+let db: string | null = "mysql, 127.0.0.1, password";
+db = null;
+
+let myVariable: undefined | string = undefined;
+myVariable = "text in variable accepter";
+
+/**
+ * any
+ */
+
+let value: any;
+
+/**
+ * unknown
+ */
+
+let result: unknown;
+result = {
+  success: true,
+};
+result = "yes very nice bro";
+result = 200;
