@@ -20,7 +20,7 @@ const prod2 = {
     description: "refrigerante de cola",
     validity: new Date("2022-12-12"),
 };
-const curse1 = {
+const course1 = {
     title: "typescript",
     price: 27.9,
     workload: 10,

@@ -50,10 +50,10 @@ const prod2: IProduct = {
  * read-only
  * não permite sobrescrever atributos
  * dentro da interface ex:
- * curse1.title = 'novo valor'
+ * course1.title = 'novo valor'
  */
 
-interface ICurse {
+interface Icourse {
   readonly title: string;
   description?: string;
   readonly price: number;
@@ -61,7 +61,7 @@ interface ICurse {
   classification: number;
 }
 
-const curse1: ICurse = {
+const course1: Icourse = {
   title: "typescript",
   price: 27.9,
   workload: 10,
