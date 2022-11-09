@@ -62,4 +62,13 @@ const menu = {
     categories: [frontEnd, backEnd, css, php],
 };
 const myTodos = ["javascript", "typescript", "php", 2000, true, backEnd];
+const jorge = {
+    id: 1,
+    created_at: new Date().getTime(),
+    updated_at: new Date().getTime(),
+    name: "jorge da silva",
+    age: 50,
+    email: "jorge@teste",
+    password: "123456",
+};
 //# sourceMappingURL=Interface.js.map

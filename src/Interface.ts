@@ -153,3 +153,33 @@ interface ITodo {
 }
 
 const myTodos: ITodo = ["javascript", "typescript", "php", 2000, true, backEnd];
+
+/**
+ * interface extends
+ */
+
+interface IModel {
+  id: number;
+  created_at: number;
+  updated_at: number;
+}
+
+interface IPeople extends IModel {
+  name: string;
+  age?: number;
+}
+
+interface IUser extends IPeople {
+  email: string;
+  password: string;
+}
+
+const jorge: IUser = {
+  id: 1,
+  created_at: new Date().getTime(),
+  updated_at: new Date().getTime(),
+  name: "jorge da silva",
+  age: 50,
+  email: "jorge@teste",
+  password: "123456",
+};
