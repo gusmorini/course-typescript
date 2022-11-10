@@ -164,12 +164,12 @@ interface IModel {
   updated_at: number;
 }
 
-interface IPeople extends IModel {
+interface IPerson extends IModel {
   name: string;
   age?: number;
 }
 
-interface IUser extends IPeople {
+interface IUser extends IPerson {
   email: string;
   password: string;
 }
